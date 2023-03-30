@@ -11,6 +11,11 @@ class PurchaseOrderService
     /**
      * Product type id and calculate total method mapping
      * eg. product_type_id => method
+     * 
+     * In order to make this more user configurable I'd swap out the below 
+     * mapping to read from a database table instead. 
+     * A UI could then be built to update the product-calulation_type mapping.
+     *  
      */
     const PRODUCT_CALCULATE_TOTAL_METHODS = [
         1 => CalculateTotalByWeight::class,
